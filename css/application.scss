@@ -10,8 +10,6 @@ $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
-
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
@@ -36,5 +34,41 @@ $grey-color-dark:  darken($grey-color, 25%);
     }
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
-// @import;
+@import "vendor/pure";
+@import "vendor/pure-grid";
+
+body {
+  font-size: $base-font-size;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $base-font-family;
+}
+
+// remove pure styling on abbr
+abbr[title] {
+  border-bottom: none;
+}
+
+.content {
+  margin: 0 auto;
+}
+
+.button {
+  @extend .pure-button;
+
+  &.primary {
+    @extend .pure-button-primary;
+  }
+}
+
+form.reserve {
+  @extend .pure-form;
+  @extend .pure-form-stacked;
+}
