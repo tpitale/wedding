@@ -61,6 +61,10 @@ abbr[title] {
   width: 80%;
 }
 
+section {
+  margin-bottom: 3em;
+}
+
 .banner {
   width: 100%;
   max-width: 1800px;
@@ -73,19 +77,38 @@ abbr[title] {
 }
 
 .parties {
-  margin-bottom: 3em;
   overflow: hidden;
+  padding: 0;
 
   li {
     float: left;
-    width: 33%;
+    width: 30%;
     list-style-type: none;
+    margin: 0 25px 30px 0;
+    padding: 0 10px 20px;
+    background-color: rgba(0,44,137,.2);
+    border-radius: 3px;
     text-align: center;
   }
 }
 
 .party-logo {
   max-width: 100px;
+}
+
+.details {
+  text-indent: 50px;
+  background-image: url('/images/DC.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 40px 40px;
+
+  &.STL {
+    background-image: url('/images/STL.png');  
+  }
+  &.NJ {
+    background-image: url('/images/NJ.png');  
+  }
 }
 
 .button {
