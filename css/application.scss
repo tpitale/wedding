@@ -78,9 +78,11 @@ section {
 .banner {
   width: 100%;
   max-width: 1800px;
-  height: 400px;
+  height: 150px;
+  margin-top: 75px;
   text-indent: -9999px;
   background-image: url('/images/banner.jpg');
+  background-repeat: no-repeat;
   background-position: center 0px;
   background-size: 100% auto;
   border-radius: 3px;
@@ -147,10 +149,25 @@ form.reserve {
   @extend .pure-form-stacked;
 }
 
+@media (min-width: 360px) {
+  .banner {
+    height: 200px;
+  }
+}
+
+@media (min-width: 420px) {
+  .banner {
+    height: 250px;
+  }
+}
+
 @media (min-width: 720px) {
   .content {
     margin: 0 auto;
     width: 80%;
+  }
+  .banner {
+    height: 300px;
   }
   .parties {
     li {
@@ -164,5 +181,8 @@ form.reserve {
 @media (min-width: 900px) {
   .content {
     width: 70%;
+  }
+  .banner {
+    height: 400px;
   }
 }
