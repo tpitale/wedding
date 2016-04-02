@@ -57,7 +57,7 @@ abbr[title] {
 }
 
 .content {
-  margin: 0 auto;
+  margin: 10px;
 }
 
 .back {
@@ -149,6 +149,7 @@ form.reserve {
 
 @media (min-width: 720px) {
   .content {
+    margin: 0 auto;
     width: 80%;
   }
   .parties {
