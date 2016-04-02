@@ -76,18 +76,22 @@ section {
   border-radius: 3px;
 }
 
+@mixin card {
+    margin: 0 25px 0 0;
+    padding: 0 10px 20px;
+    background-color: rgba(0,44,137,.2);
+    border-radius: 3px;
+}
+
 .parties {
   overflow: hidden;
   padding: 0;
 
   li {
+    @include card;
     float: left;
     width: 30%;
     list-style-type: none;
-    margin: 0 25px 30px 0;
-    padding: 0 10px 20px;
-    background-color: rgba(0,44,137,.2);
-    border-radius: 3px;
     text-align: center;
   }
 }
@@ -111,12 +115,25 @@ section {
   }
 }
 
+.RSVP {
+  @include card;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 3em;
+}
+
 .button {
   @extend .pure-button;
 
   &.primary {
     @extend .pure-button-primary;
   }
+}
+
+.back {
+  border-radius: 30px;
+  width: 60px;
 }
 
 form.reserve {
