@@ -61,6 +61,33 @@ abbr[title] {
   width: 80%;
 }
 
+.banner {
+  width: 100%;
+  max-width: 1800px;
+  height: 400px;
+  text-indent: -9999px;
+  background-image: url('/images/banner.jpg');
+  background-position: center 0px;
+  background-size: 100% auto;
+  border-radius: 3px;
+}
+
+.parties {
+  margin-bottom: 3em;
+  overflow: hidden;
+
+  li {
+    float: left;
+    width: 33%;
+    list-style-type: none;
+    text-align: center;
+  }
+}
+
+.party-logo {
+  max-width: 100px;
+}
+
 .button {
   @extend .pure-button;
 
