@@ -58,7 +58,6 @@ abbr[title] {
 
 .content {
   margin: 0 auto;
-  width: 70%;
 }
 
 .back {
@@ -88,7 +87,6 @@ section {
 }
 
 @mixin card {
-    margin: 0 25px 0 0;
     padding: 0 10px 20px;
     background-color: rgba(0,44,137,.2);
     border-radius: 3px;
@@ -100,11 +98,13 @@ section {
 
   li {
     @include card;
-    float: left;
-    width: 30%;
     list-style-type: none;
     text-align: center;
   }
+}
+
+.tagline {
+  font-size: .8em;
 }
 
 .party-logo {
@@ -145,4 +145,23 @@ section {
 form.reserve {
   @extend .pure-form;
   @extend .pure-form-stacked;
+}
+
+@media (min-width: 720px) {
+  .content {
+    width: 80%;
+  }
+  .parties {
+    li {
+      float: left;
+      width: 30%;
+      margin: 0 3% 0 0;    
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .content {
+    width: 70%;
+  }
 }
