@@ -58,11 +58,22 @@ abbr[title] {
 
 .content {
   margin: 0 auto;
-  width: 80%;
+  width: 70%;
+}
+
+.back {
+  border-radius: 30px;
+  width: 60px;
+  margin-top: 20px;
+  margin-left: -70px;
 }
 
 section {
   margin-bottom: 3em;
+
+  &:first-of-type {
+    margin-top: -75px;
+  }
 }
 
 .banner {
@@ -129,11 +140,6 @@ section {
   &.primary {
     @extend .pure-button-primary;
   }
-}
-
-.back {
-  border-radius: 30px;
-  width: 60px;
 }
 
 form.reserve {
