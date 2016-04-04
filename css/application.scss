@@ -149,6 +149,10 @@ form.reserve {
   @extend .pure-form-stacked;
 }
 
+form.reserve-2 {
+  display: none;
+}
+
 @media (min-width: 360px) {
   .banner {
     height: 200px;
