@@ -125,7 +125,9 @@ section {
 
   li {
     @include card;
-    margin-bottom: 20px;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto 20px;
     padding-top: 10px;
     padding-bottom: 12px;
     list-style-type: none;
