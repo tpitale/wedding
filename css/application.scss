@@ -101,7 +101,7 @@ section {
   width: 100%;
   max-width: 1800px;
   height: 150px;
-  margin-top: 75px;
+  margin-top: 85px;
   text-indent: -9999px;
   background-image: url('/images/banner-text-crop.png'), url('/images/banner-portrait.jpg');
   background-repeat: no-repeat, no-repeat;
@@ -210,6 +210,7 @@ form.reserve-2 {
     width: 80%;
   }
   .banner {
+    margin: 110px auto 0;
     height: 300px;
   }
   .parties {
@@ -222,11 +223,11 @@ form.reserve-2 {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 940px) {
   .content {
     width: 70%;
   }
   .banner {
-    height: 400px;
+    height: 350px;
   }
 }
