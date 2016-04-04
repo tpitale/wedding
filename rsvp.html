@@ -1,31 +1,51 @@
 ---
 layout: application
+key: rsvp
 ---
 
 <h1>RSVP</h1>
 
-<form action="https://rsvp.pitaleerb.com/submissions?form_id=cfbefb79-4bb2-451e-bf28-191ac50da469" method="POST" class="reserve">
+<form class="reserve reserve-1" id="reservation_step_1">
+  <fieldset>
+    <label for="street_number">Street Number</label>
+    <input type="text" name="street_number" id="street_number" placeholder="Street Number">
+
+    <label for="postal_code">Postal Code</label>
+    <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
+
+    <input type="submit" value="Next" class="button primary">
+  </fieldset>
+</form>
+
+<form action="https://rsvp.pitaleerb.com/submissions?form_id=cfbefb79-4bb2-451e-bf28-191ac50da469" method="POST" class="reserve reserve-2" id="reservation_step_2">
   <fieldset>
     <legend>Details</legend>
 
     <input type="hidden" name="_next" value="http://pitaleerb.com/thanks.html" />
     <input type="text" name="_gotcha" style="display:none" />
 
-    <label for="name">Name</label>
-    <input type="text" name="name" placeholder="Name">
-
     <label for="_replyto">Email</label>
     <input type="email" name="_replyto" placeholder="Email">
 
-    <label for="location-stl" class="pure-checkbox">
-      <input id="location-stl" name="locations[]" type="checkbox" value="STL"> Saint Louis, MO
-    </label>
-    <label for="location-nj" class="pure-checkbox">
-      <input id="location-nj" name="locations[]" type="checkbox" value="NJ"> Wall, NJ
-    </label>
-    <label for="location-dc" class="pure-checkbox">
-      <input id="location-dc" name="locations[]" type="checkbox" value="DC"> Washington, DC
-    </label>
+    <fieldset id="guests-set">
+      <legend>Guests</legend>
+
+      <label id="guest-template" for="guests-" class="pure-checkbox" style="display:none;"><input id="guests-" name="guests[]" type="checkbox" value=""></label>
+    </fieldset>
+
+    <fieldset id="locations-set">
+      <legend>Parties</legend>
+
+      <label for="location-stl" class="pure-checkbox">
+        <input id="location-stl" name="locations[]" type="checkbox" value="STL"> Saint Louis, MO
+      </label>
+      <label for="location-nj" class="pure-checkbox">
+        <input id="location-nj" name="locations[]" type="checkbox" value="NJ"> Wall, NJ
+      </label>
+      <label for="location-dc" class="pure-checkbox">
+        <input id="location-dc" name="locations[]" type="checkbox" value="DC"> Washington, DC
+      </label>
+    </fieldset>
 
     <input type="submit" value="RSVP!" class="button primary">
   </fieldset>
