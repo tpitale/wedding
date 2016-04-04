@@ -67,6 +67,21 @@ abbr[title] {
   margin: 10px;
 }
 
+a {
+  color: $slate-blue;
+
+  &:hover { 
+    color: darken($slate-blue, 10%);
+  }
+  &:active { 
+    color: $pink;
+  }
+  &:visited { 
+    color: darken($sage, 30%);
+  }
+
+}
+
 .back {
   border-radius: 30px;
   width: 60px;
@@ -158,6 +173,11 @@ a.button,
     @extend .pure-button-primary;
     background-color: $sage;
   }
+}
+
+a.button,
+.button {
+  color: darken($sage, 40%);
 }
 
 form.reserve {
