@@ -81,10 +81,10 @@ section {
   height: 150px;
   margin-top: 75px;
   text-indent: -9999px;
-  background-image: url('/images/banner.jpg');
-  background-repeat: no-repeat;
-  background-position: center 0px;
-  background-size: 100% auto;
+  background-image: url('/images/banner-text-crop.png'), url('/images/banner-portrait.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 20px, center 0px;
+  background-size: 40% auto, 100% auto;
   border-radius: 3px;
 }
 
@@ -162,6 +162,7 @@ form.reserve-2 {
 @media (min-width: 420px) {
   .banner {
     height: 250px;
+    background-position: right 20px, center 0px;
   }
 }
 
