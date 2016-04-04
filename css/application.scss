@@ -10,16 +10,15 @@ $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$pink: rgb(248, 132, 166);
-$sage: rgb(156, 175, 172);
-$pale-blue: 242 247 251;
-$slate-blue: rgb(99, 125, 144);
-$denim: rgb(224, 223, 221);
-$nearly-white: rgb(235, 240, 243);
-$nearly-black: rgb(14, 21, 13);
+$pink:            rgb(248, 132, 166);
+$sage:            rgb(156, 175, 172);
+$slate-blue:      rgb(99, 125, 144);
+$nearly-white:    rgb(235, 240, 243);
+$pale-blue:       rgb(242, 247, 251);
+$nearly-black:    rgb(14, 21, 13);
 
-$text-color:       #111;
-$background-color: #fdfdfd;
+$text-color:       $nearly-black; //Previously #111
+$background-color: $nearly-white; //Previously #fdfdfd
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
@@ -98,13 +97,16 @@ section {
 
 @mixin card {
     padding: 0 10px 20px;
-    background-color: rgba(0,44,137,.2);
+    background-color: lighten($slate-blue, 15%);
     border-radius: 3px;
 }
 
 .parties {
   overflow: hidden;
   padding: 0;
+
+  h3 {
+  }
 
   li {
     @include card;
@@ -144,11 +146,14 @@ section {
   margin-bottom: 3em;
 }
 
+a.button,
 .button {
   @extend .pure-button;
+  box-shadow: 1px 1px darken($sage, 15%);
 
   &.primary {
     @extend .pure-button-primary;
+    background-color: $sage;
   }
 }
 
