@@ -10,8 +10,15 @@ $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
+$pink:            rgb(248, 132, 166);
+$sage:            rgb(156, 175, 172);
+$slate-blue:      rgb(99, 125, 144);
+$nearly-white:    rgb(235, 240, 243);
+$pale-blue:       rgb(242, 247, 251);
+$nearly-black:    rgb(14, 21, 13);
+
+$text-color:       $nearly-black; //Previously #111
+$background-color: $nearly-white; //Previously #fdfdfd
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
@@ -81,16 +88,16 @@ section {
   height: 150px;
   margin-top: 75px;
   text-indent: -9999px;
-  background-image: url('/images/banner.jpg');
-  background-repeat: no-repeat;
-  background-position: center 0px;
-  background-size: 100% auto;
+  background-image: url('/images/banner-text-crop.png'), url('/images/banner-portrait.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 20px, center 0px;
+  background-size: 40% auto, 100% auto;
   border-radius: 3px;
 }
 
 @mixin card {
     padding: 0 10px 20px;
-    background-color: rgba(0,44,137,.2);
+    background-color: lighten($slate-blue, 15%);
     border-radius: 3px;
 }
 
@@ -98,8 +105,14 @@ section {
   overflow: hidden;
   padding: 0;
 
+  h3 {
+  }
+
   li {
     @include card;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 12px;
     list-style-type: none;
     text-align: center;
   }
@@ -110,14 +123,14 @@ section {
 }
 
 .party-logo {
-  max-width: 100px;
+  max-width: 120px;
 }
 
 .details {
   text-indent: 50px;
   background-image: url('/images/DC.png');
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: left top;
   background-size: 40px 40px;
 
   &.STL {
@@ -136,11 +149,14 @@ section {
   margin-bottom: 3em;
 }
 
+a.button,
 .button {
   @extend .pure-button;
+  box-shadow: 1px 1px darken($sage, 15%);
 
   &.primary {
     @extend .pure-button-primary;
+    background-color: $sage;
   }
 }
 
@@ -162,6 +178,7 @@ form.reserve-2 {
 @media (min-width: 420px) {
   .banner {
     height: 250px;
+    background-position: right 20px, center 0px;
   }
 }
 
@@ -177,7 +194,8 @@ form.reserve-2 {
     li {
       float: left;
       width: 30%;
-      margin: 0 3% 0 0;    
+      margin: 0 3% 0 0;
+      padding-top: 0;    
     }
   }
 }
