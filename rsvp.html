@@ -8,11 +8,17 @@ key: rsvp
 
 <form class="reserve reserve-1" id="reservation_step_1">
   <fieldset>
-    <label for="street_number">Street Number</label>
-    <input type="text" name="street_number" id="street_number" placeholder="Street Number">
+    <p>Yay! We're excited to celebrate with you. Enter your street number and zipcode as the appear on your invitation.</p>
+    
+    <p>
+      <label for="street_number">Street Number</label>
+      <input type="text" name="street_number" id="street_number" placeholder="Street Number">
+    </p>
 
-    <label for="postal_code">Postal Code</label>
-    <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
+    <p>
+      <label for="postal_code">Postal Code</label>
+      <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
+    </p>
 
     <input type="submit" value="Next" class="button primary">
   </fieldset>
@@ -20,23 +26,18 @@ key: rsvp
 
 <form action="https://rsvp.pitaleerb.com/submissions?form_id=cfbefb79-4bb2-451e-bf28-191ac50da469" method="POST" class="reserve reserve-2" id="reservation_step_2">
   <fieldset>
-    <legend>Details</legend>
 
     <input type="hidden" name="_next" value="http://pitaleerb.com/thanks.html" />
     <input type="text" name="_gotcha" style="display:none" />
 
-    <label for="_replyto">Email</label>
-    <input type="email" name="_replyto" placeholder="Email">
-
     <fieldset id="guests-set">
-      <legend>Guests</legend>
-
+      <p>Who will attend the party?</p>
       <label id="guest-template" for="guests-" class="pure-checkbox" style="display:none;"><input id="guests-" name="guests[]" type="checkbox" value=""></label>
     </fieldset>
 
     <fieldset id="locations-set">
-      <legend>Parties</legend>
 
+      <p>Which party will you attend?</p>
       <label for="location-stl" class="pure-checkbox">
         <input id="location-stl" name="locations[]" type="checkbox" value="STL"> Saint Louis, MO
       </label>
@@ -47,6 +48,11 @@ key: rsvp
         <input id="location-dc" name="locations[]" type="checkbox" value="DC"> Washington, DC
       </label>
     </fieldset>
+
+    <p>
+      <label for="_replyto">Where should we send party updates?</label>
+      <input type="email" name="_replyto" placeholder="Email">
+    </p>
 
     <input type="submit" value="RSVP!" class="button primary">
   </fieldset>
