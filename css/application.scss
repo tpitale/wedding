@@ -185,6 +185,11 @@ a.button,
 form.reserve {
   @extend .pure-form;
   @extend .pure-form-stacked;
+
+  textarea {
+    height: 10em;
+    width: 30em;
+  }
 }
 
 form.reserve-2 {

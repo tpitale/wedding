@@ -29,6 +29,9 @@ RSVP.advance_step_2 = function(e) {
   var street_number = document.getElementById('street_number');
   var postal_code = document.getElementById('postal_code');
 
+  document.getElementById('rsvp_street_number').value = street_number.value;
+  document.getElementById('rsvp_postal_code').value = postal_code.value;
+
   url = "https://rsvp.pitaleerb.com/invites/"+street_number.value+"-"+postal_code.value+".json"
 
   RSVP.getJSON(url, RSVP.enable_step_2)

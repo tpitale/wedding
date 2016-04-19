@@ -27,6 +27,9 @@ key: rsvp
 <form action="https://rsvp.pitaleerb.com/submissions?form_id=cfbefb79-4bb2-451e-bf28-191ac50da469" method="POST" class="reserve reserve-2" id="reservation_step_2">
   <fieldset>
 
+    <input type="hidden" name="street_number" id="rsvp_street_number" value="" />
+    <input type="hidden" name="postal_code" id="rsvp_postal_code" value="" />
+
     <input type="hidden" name="_next" value="http://pitaleerb.com/thanks.html" />
     <input type="text" name="_gotcha" style="display:none" />
 
@@ -60,6 +63,11 @@ key: rsvp
     <p>
       <label for="_replyto">Where should we send party updates?</label>
       <input type="email" name="_replyto" placeholder="Email">
+    </p>
+
+    <p>
+      <label for="comments">Parting thoughts, questions, or comments?</label>
+      <textarea name="comments"></textarea>
     </p>
 
     <input type="submit" value="RSVP!" class="button primary">
